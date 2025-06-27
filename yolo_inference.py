@@ -8,4 +8,4 @@ model = YOLO("models/best.pt")
 results = model.predict(source = "input_videos/15sec_input_720p.mp4", save=True)
 
 #Tracking
-results = model.track(source = "input_videos/video.mp4", save=True, persist=True)
+#results = model.track(source = "input_videos/video.mp4", save=True, persist=True)
