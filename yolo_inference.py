@@ -2,7 +2,7 @@
 from ultralytics import YOLO
 
 #Load the YOLO Model
-model = YOLO("models/best.pt")
+model = YOLO("yolo11l.pt")
 
 #Object Detection
 results = model.predict(source = "input_videos/15sec_input_720p.mp4", save=True)
