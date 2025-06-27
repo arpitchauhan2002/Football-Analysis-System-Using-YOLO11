@@ -28,7 +28,7 @@ This project enables:
 ---
 
 📦 Directory Structure
----
+```
 .
 ├── input_video/               # Source input video
 ├── model/                     # Model export or download link
@@ -42,4 +42,4 @@ This project enables:
 ├── main.py                    # Entry point script
 ├── requirements.txt           # Python dependencies
 └── README.md                  # You are here
----
+```
