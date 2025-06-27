@@ -67,6 +67,17 @@ source venv/bin/activate
 ```bash
 pip install -r requirements.txt
 ```
+**⚠️ Known Issue During requirements.txt Installation**
+If you encounter the following error while installing dependencies:
+```bash
+Could not find a version that satisfies the requirement torch>=1.7.0 (from ultralytics->-r requirements.txt)
+No matching distribution found for torch>=1.7.0
+```
+*✅ Fix: Ensure the following conditions are met before running pip install -r requirements.txt:*
+
+- You are using Python 3.8 to 3.11 (preferably 64-bit)
+- You have updated pip to the latest version
+
 **Or install manually:**
 ```bash
 pip install opencv-python torch torchvision numpy pillow scikit-learn ultralytics
