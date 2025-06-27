@@ -54,8 +54,11 @@ cd Football-Analysis-System-Using-YOLO11
 
 ```bash
 python -m venv venv
+
 # On Windows
+
 venv\Scripts\activate
+
 # On Unix/macOS
 source venv/bin/activate
 ```
