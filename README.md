@@ -78,7 +78,7 @@ model/
 If you're using an external model link, download and store the weights in the model/ folder manually.
 ---
 
-## ▶️ Running the Code
+### ▶️ Running the Code
 
 ### 1. Detection Using Pretrained YOLOv11
 ```bash
@@ -104,7 +104,7 @@ results = model.track(source="input_video/15sec_input_720p.mp4", save=True, pers
 - Frame-wise results or Re-ID metadata: tracker_stubs/player_detection.pkl
 ---
 
-## 🧾 Dependencies
+### 🧾 Dependencies
 - Python 3.8+
 - OpenCV
 - Ultralytics (YOLOv8)
