@@ -73,10 +73,13 @@ pip install opencv-python torch torchvision numpy pillow scikit-learn ultralytic
 
 ### 4️⃣ Model Setup
 
-Download the trained YOLOv11 model weights (best.pt) generated from your training script or i have given the drive link to download the model:
+You can run the system using two different approaches, depending on the model:
+
+##🔹 Run with Pretrained YOLOv11 Model
+
 ```bash
-model/
-└── best.pt
+python yolo_inference.py
+```
 
 If you're using an external model link, download and store the weights in the model/ folder manually.
 ---
