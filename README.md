@@ -17,3 +17,29 @@ This repository presents a system for detecting and re-identifying players in fo
 📌 *Custom Trained YOLOv11 Model for Football Player Detection | Re-ID and Tracking Demo*
 
 ---
+## 📂 Project Overview
+
+This project enables:
+- ⚡ Real-time detection of players, referee, football, and objects
+- 🏷️ Re-identification of players across frames using tracking
+- 🎥 Generation of output videos with bounding boxes and identities
+- 📁 Saving detection and tracking results as `.pkl` files
+
+---
+
+📦 Directory Structure
+---
+.
+├── input_video/               # Source input video
+├── model/                     # Model export or download link
+├── notebook_for_training_the_model/
+│   └── Football_Analysis_System (1).ipynb
+├── output_videos/sf/          # Output results
+├── tracker_stubs/             # .pkl file for tracking results
+├── trackers/                  # Custom tracker logic
+├── utils/                     # Utility functions
+├── yolo_inference.py          # YOLO detection logic
+├── main.py                    # Entry point script
+├── requirements.txt           # Python dependencies
+└── README.md                  # You are here
+---
