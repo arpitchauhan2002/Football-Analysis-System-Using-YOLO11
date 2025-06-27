@@ -75,18 +75,45 @@ pip install opencv-python torch torchvision numpy pillow scikit-learn ultralytic
 
 You can run the system using two different approaches, depending on the model:
 
-##🔹 Run with Pretrained YOLOv11 Model
+**🔹 Run with Pretrained YOLOv11 Model**
 
 ```bash
 python yolo_inference.py
 ```
+📌 Output:
 
-If you're using an external model link, download and store the weights in the model/ folder manually.
----
+- Player detections will be visible with simple bounding boxes and generic class names.
+- Only numbers and approximate locations will be shown.
+- No refined Re-ID or consistent player identification across frames.
+  
+**🟢 Run with Custom Trained YOLOv11 Model**
+- After training your model on annotated football images (referee, football, players, etc.), place your best weights file here:
+```bash
+model/
+└── best.pt
+```
+**📥 Note:**
+- A direct download link for the trained model weights (best.pt) is provided inside the file:
+```bash
+model/model_link
+```
+-Please open the model_link file and download the model manually. Once downloaded, place it in the model/ folder.
+-Or You Can You Your Own Model
+**Then run the main pipeline using:**
+```bash
+python main.py
+```
+**📌 Output:**
+
+- Players and referees are marked with consistent Re-ID numbers (as shown in the output image).
+- Objects such as the football are accurately detected and tracked.
+- Frame-by-frame tracking metadata is saved in tracker_stubs/player_detection.pkl.
+
 
 ### ▶️ Running the Code
 
-### 1. Detection Using Pretrained YOLOv11
+**1. Detection Using Pretrained YOLOv11**
+
 ```bash
 from ultralytics import YOLO
 
@@ -99,7 +126,8 @@ results = model.predict(source="input_video/15sec_input_720p.mp4", save=True)
 ```
 - Outputs: Detected video is saved in runs/detect/predict/
 
-### 2. Tracking and Player Re-Identification
+**2. Tracking and Player Re-Identification**
+
 ```bash
 After replacing with your trained model:
 model = YOLO("model/best.pt")  # Your fine-tuned YOLOv11 model
